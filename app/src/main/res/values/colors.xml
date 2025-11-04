@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- IADE GO Brand Colors -->
+    <color name="primary_blue">#5B7C99</color>
+    <color name="primary_blue_dark">#4A6380</color>
+    <color name="accent_teal">#4DD4AC</color>
+    <color name="accent_teal_dark">#3CB88E</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="text_dark">#1A1A1A</color>
+    <color name="text_gray">#757575</color>
+    <color name="text_light_gray">#BDBDBD</color>
+    <color name="coral_accent">#FF6B6B</color>
+</resources>

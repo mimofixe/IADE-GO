@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.projeto_3o_semestre_pdm.ui.main.MainMenuFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main_menu">
+
+        <action
+            android:id="@+id/action_mainMenu_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainMenu_to_requestInfo"
+            app:destination="@id/requestInfoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.projeto_3o_semestre_pdm.ui.auth.LoginFragment"
+        android:label="@string/login_title"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_menuSelection"
+            app:destination="@id/menuSelectionFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuSelectionFragment"
+        android:name="com.example.projeto_3o_semestre_pdm.ui.menu.MenuSelectionFragment"
+        android:label="@string/menu_selection_title"
+        tools:layout="@layout/fragment_menu_selection">
+
+        <action
+            android:id="@+id/action_menuSelection_to_map"
+            app:destination="@id/mapFragment" />
+
+        <action
+            android:id="@+id/action_menuSelection_to_foodMenu"
+            app:destination="@id/foodMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodMenuFragment"
+        android:name="com.example.projeto_3o_semestre_pdm.ui.menu.FoodMenuFragment"
+        android:label="@string/cantina_bar"
+        tools:layout="@layout/fragment_food_menu">
+
+        <action
+            android:id="@+id/action_foodMenu_to_qrCode"
+            app:destination="@id/qrCodeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/qrCodeFragment"
+        android:name="com.example.projeto_3o_semestre_pdm.ui.qr.QRCodeFragment"
+        android:label="@string/qr_code_title"
+        tools:layout="@layout/fragment_qr_code" />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.projeto_3o_semestre_pdm.ui.map.MapFragment"
+        android:label="GPS"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/requestInfoFragment"
+        android:name="com.example.projeto_3o_semestre_pdm.ui.contact.RequestInfoFragment"
+        android:label="@string/request_info_title"
+        tools:layout="@layout/fragment_request_info">
+
+        <action
+            android:id="@+id/action_requestInfo_to_success"
+            app:destination="@id/successFragment"
+            app:popUpTo="@id/requestInfoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.example.projeto_3o_semestre_pdm.ui.common.SuccessFragment"
+        android:label="@string/thank_you"
+        tools:layout="@layout/fragment_success">
+
+        <action
+            android:id="@+id/action_success_to_mainMenu"
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/mainMenuFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+</navigation>

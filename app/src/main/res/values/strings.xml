@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IADE GO</string>
+
+    <!-- Main Menu -->
+    <string name="welcome_title">IADE GO\nVIDE GO</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_request_info">Request Info</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Login</string>
+    <string name="student_number">Student Number</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="btn_submit">Submit</string>
+    <string name="hint_student_number">Enter student number</string>
+    <string name="hint_password">Enter password</string>
+
+    <!-- Menu Selection -->
+    <string name="menu_selection_title">Select Option</string>
+    <string name="map_iade">Mapa IADE</string>
+    <string name="cantina_bar">Cantina/Bar</string>
+    <string name="btn_back">Voltar</string>
+
+    <!-- Food Menu -->
+    <string name="food_menu_title">Menu</string>
+    <string name="menu_cookies">Cookies</string>
+    <string name="menu_croissant">Croissant Brioche</string>
+    <string name="menu_tosta_mista">Tosta Mista</string>
+    <string name="menu_brownie">Brownie</string>
+    <string name="menu_sandes_mista">Sandes mista</string>
+    <string name="menu_torradas">Torradas</string>
+    <string name="btn_checkout">Checkout</string>
+    <string name="total_price">Total: €%.2f</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_number">Número</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_course">Curso</string>
+    <string name="payment_methods">Métodos de pagamento</string>
+    <string name="credit_card">Credit card</string>
+    <string name="paypal">Paypal</string>
+
+    <!-- Request Info -->
+    <string name="request_info_title">Request Info</string>
+    <string name="field_name">Name</string>
+    <string name="field_last_name">Last name</string>
+    <string name="field_email">Email</string>
+    <string name="field_message">Message</string>
+    <string name="contact_us">Contact us at +351 210 206 704</string>
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_last_name">Enter your last name</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_message">Enter your message</string>
+
+    <!-- Success -->
+    <string name="thank_you">Thank you!</string>
+    <string name="details_submitted">Your details has been successfully submitted.</string>
+
+    <!-- QR Code -->
+    <string name="qr_code_title">Your QR Code</string>
+    <string name="scan_at_checkout">Scan this at checkout</string>
+    <string name="order_number">Order #%s</string>
+
+    <!-- Errors -->
+    <string name="error_empty_field">This field cannot be empty</string>
+    <string name="error_invalid_email">Please enter a valid email</string>
+    <string name="error_login_failed">Login failed. Please try again.</string>
+</resources>
