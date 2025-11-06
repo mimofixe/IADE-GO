@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/campus_building"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Dark Overlay -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CC000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logo at Top -->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="IADE Logo"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Profile Button (top right) -->
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:contentDescription="Profile"
+        android:src="@android:drawable/ic_menu_myplaces"
+        app:tint="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Mapa IADE Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_map_iade"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:text="@string/map_iade"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#4DD4AC"
+            android:layout_marginBottom="24dp"
+            app:icon="@android:drawable/ic_dialog_map"
+            app:iconGravity="top"
+            app:iconTint="@android:color/white"
+            app:iconSize="56dp" />
+
+        <!-- Cantina/Bar Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cantina_bar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:text="@string/cantina_bar"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#4DD4AC"
+            android:layout_marginBottom="24dp"
+            app:icon="@android:drawable/ic_menu_today"
+            app:iconGravity="top"
+            app:iconTint="@android:color/white"
+            app:iconSize="56dp" />
+
+        <!-- Back Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_back"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#33FFFFFF"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

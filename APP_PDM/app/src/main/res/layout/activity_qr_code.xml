@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#5B7C99"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Container for all states -->
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- STATE 1: Order Summary -->
+        <LinearLayout
+            android:id="@+id/layout_order_summary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Summary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:layout_marginBottom="32dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total Items"
+                            android:textSize="16sp"
+                            android:textColor="#757575" />
+
+                        <TextView
+                            android:id="@+id/tv_summary_items"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 items"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginBottom="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total Amount"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A" />
+
+                        <TextView
+                            android:id="@+id/tv_summary_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="€0.00"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#4DD4AC" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pay with QR Code"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_generate_qr"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Generate Payment QR"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                app:cornerRadius="8dp"
+                app:backgroundTint="#4DD4AC"
+                app:icon="@android:drawable/ic_menu_gallery"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Cancel"
+                android:textSize="16sp"
+                android:textColor="#757575"
+                android:textAllCaps="false"
+                app:cornerRadius="8dp"
+                app:backgroundTint="#E8E8E8"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+        <!-- STATE 2: QR Code Payment -->
+        <ScrollView
+            android:id="@+id/layout_qr_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment QR Code"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_qr_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This QR code represents your payment"
+                    android:textSize="14sp"
+                    android:textColor="#757575"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    android:layout_marginBottom="24dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_qr_code"
+                            android:layout_width="280dp"
+                            android:layout_height="280dp"
+                            android:contentDescription="Payment QR Code"
+                            android:scaleType="fitCenter"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_order_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Order #12345"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#4DD4AC"
+                            android:layout_marginTop="16dp" />
+
+                        <TextView
+                            android:id="@+id/tv_qr_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="€0.00"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_confirm_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Confirm Payment"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#4DD4AC"
+                    android:layout_marginBottom="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cancel_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Back"
+                    android:textSize="16sp"
+                    android:textColor="#757575"
+                    android:textAllCaps="false"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#E8E8E8"
+                    style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- STATE 3: Processing Payment -->
+        <LinearLayout
+            android:id="@+id/layout_processing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:indeterminateTint="#4DD4AC"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/tv_processing_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Processing payment..."
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please wait"
+                android:textSize="14sp"
+                android:textColor="#757575" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
