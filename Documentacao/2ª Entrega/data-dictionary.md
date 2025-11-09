@@ -1,4 +1,4 @@
-# 📖 Dicionário de Dados - IADE GO
+# Dicionário de Dados - IADE GO
 
 **Versão:** 1.0  
 **Data:** Janeiro 2025  
@@ -8,7 +8,7 @@
 
 ---
 
-## 📑 Índice de Tabelas
+## Índice de Tabelas
 
 1. [users](#1-users---utilizadores)
 2. [menu_categories](#2-menu_categories---categorias-de-menu)
