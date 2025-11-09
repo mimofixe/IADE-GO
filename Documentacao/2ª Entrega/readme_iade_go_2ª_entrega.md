@@ -8,7 +8,7 @@
 
 ---
 
-## 📑 Índice
+## Índice
 
 1. [Elementos do Grupo](#elementos-do-grupo)
 2. [Resumo](#resumo)
