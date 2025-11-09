@@ -612,35 +612,6 @@ O **IADE GO** tem potencial para:
 - [Figma](https://www.figma.com/)
 - [ClickUp](https://clickup.com/)
 
-## Anexos
-
-### A. Estrutura do Repositório
-```
-Projeto_3o_Semestre/
-├── server/                      # Backend Spring Boot
-│   ├── src/main/java/
-│   │   └── com/iade/iadego/
-│   │       ├── controller/
-│   │       ├── entity/
-│   │       ├── repository/
-│   │       └── dto/
-│   └── src/main/resources/
-│       └── application.properties
-│
-├── App PDM/                     # App Android
-│   └── app/src/main/java/
-│       └── com/example/projeto_3o_semestre_pdm/
-│           ├── ui/
-│           ├── data/
-│           └── MainActivity.kt
-│
-└── docs/                        # Documentação
-    ├── er-diagram.png
-    ├── class-diagram.md
-    ├── rest-api-complete.md
-    ├── data-dictionary.md
-    └── data-guide.md
-```
 
 ### B. Links Úteis
 
@@ -649,5 +620,3 @@ Projeto_3o_Semestre/
 ---
 
 **Fim do Relatório Intermédio**
-
-*IADE GO - Otimizando a experiência do estudante, uma encomenda de cada vez! 🚀*
