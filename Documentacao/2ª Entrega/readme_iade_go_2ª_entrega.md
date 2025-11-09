@@ -159,7 +159,7 @@ Nesta 2ª entrega, apresentamos:
 
 ### 4.1 Diagrama Entidade-Relação
 
-![Diagrama ER](diagrama_er.jpg)
+![Diagrama ER](diagrama_er.png)
 
 ### 4.2 Entidades Principais
 
