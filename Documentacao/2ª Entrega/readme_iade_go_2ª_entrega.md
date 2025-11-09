@@ -109,25 +109,28 @@ Nesta 2ª entrega, apresentamos:
 
 ### 3.1 Visão Geral
 ```
-┌─────────────────────────────────────────────────────────┐
-│                   CAMADA APRESENTAÇÃO                    │
-│              App Android (Kotlin + Compose)              │
-└────────────────────┬────────────────────────────────────┘
+
+                  CAMADA APRESENTAÇÃO                    
+             App Android (Kotlin + Compose)              
+
                      │ HTTP/REST
                      │
-┌────────────────────▼────────────────────────────────────┐
-│                   CAMADA NEGÓCIO                         │
-│              Backend (Spring Boot - Java)                │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
-│  │ Controllers  │  │ Repositories │  │   Entities   │  │
-│  └──────────────┘  └──────────────┘  └──────────────┘  │
-└────────────────────┬────────────────────────────────────┘
+                     v
+                   CAMADA NEGÓCIO
+                      
+              Backend (Spring Boot - Java)                
+    
+         Controllers     Repositories      Entities
+
+                     |
+                     |
+                     |
                      │ JPA/Hibernate
                      │
-┌────────────────────▼────────────────────────────────────┐
-│                   CAMADA DADOS                           │
-│              Base de Dados (MySQL 8.0)                   │
-└─────────────────────────────────────────────────────────┘
+                     v
+                   CAMADA DADOS                           
+              Base de Dados (MySQL 8.0)                   
+
 ```
 
 ### 3.2 Componentes Principais
