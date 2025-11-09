@@ -5,7 +5,7 @@ import java.util.List;
 public class CreateOrderRequest {
     private Long userId;
     private List<OrderItemRequest> items;
-    private String paymentMethod;
+    private String paymentMethod; // "PAY_NOW" ou "PAY_LATER"
 
     // Constructors
     public CreateOrderRequest() {}
