@@ -91,7 +91,7 @@ Nesta 2ª entrega, apresentamos:
 - 12 produtos disponíveis
 - 1 encomenda de exemplo com 3 itens
 
-#### ⚙️ **Interface Android (60% Completo)**
+#### **Interface Android (60% Completo)**
 
 **Ecrãs Desenvolvidos:**
 -  Splash Screen
