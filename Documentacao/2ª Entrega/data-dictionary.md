@@ -1,7 +1,7 @@
 # Dicionário de Dados - IADE GO
 
 **Versão:** 1.0  
-**Data:** Janeiro 2025  
+**Data:** Novembro 2025  
 **Base de Dados:** MySQL 8.0  
 **Charset:** UTF-8  
 **Collation:** utf8mb4_unicode_ci
