@@ -276,7 +276,7 @@ Produtos individuais dentro de cada encomenda.
 
 ### 4.3 Diagrama de Classes
 
-![Diagrama de Classes](class-diagram.png)
+![Diagrama de Classes](diagrama_classes.jpg)
 
 *Ver ficheiro `class-diagram.md` para código Mermaid/PlantUML*
 
