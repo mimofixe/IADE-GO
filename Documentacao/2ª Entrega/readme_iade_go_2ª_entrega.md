@@ -25,7 +25,7 @@
 ## Elementos do Grupo
 
 | Número | Nome |
-|--------|------|-------|
+|--------|------|
 | 20230331 | David Bação | 
 | 202301001 | Francisco Lourinho | 
 | 20241805 | Vivandro Kambaza | 
