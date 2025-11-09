@@ -1,4 +1,4 @@
-# 📊 Guia de Dados - IADE GO
+# Guia de Dados - IADE GO
 
 **Versão:** 1.0  
 **Data:** Novembro 2025  
@@ -7,7 +7,7 @@
 
 ---
 
-## 📑 Índice
+## Índice
 
 1. [Visão Geral](#1-visão-geral)
 2. [Dados de Exemplo - Users](#2-dados-de-exemplo---users)
